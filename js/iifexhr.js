@@ -10,7 +10,7 @@ var Chatty = ((originalChatty) => {
 
 			messageRequest.addEventListener(`load`, () => {
 				var messageData = JSON.parse(this.responseText);				
-				console.log("messageData", messageData);
+				console.log(`messageData`, messageData);
 				messageBoardArray = messageData.messages;
 				console.log(`primary.json successfully loaded!`);
 				// This should build DOM with updated info
@@ -18,7 +18,7 @@ var Chatty = ((originalChatty) => {
 			});
 			
 			messageRequest.addEventListener(`error`, () => {
-				console.log("An error occurred while transferring the messageData");
+				console.log(`An error occurred while transferring the messageData`);
 			});
 
 			messageRequest.open(`GET`, `primary.json`);
