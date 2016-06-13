@@ -1,0 +1,29 @@
+.navBar {
+	position: fixed;
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+.navBar-contents {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+
+.navBar-contents > img {
+	height: 50px;
+}
+
+.navBar-contents > input {
+	width: 300px;
+	height: 25px;
+	margin-top: 12px;
+	vertical-align: top;
+}
+
+.navBar-contents > button {
+	padding: 9px;
+	margin-top: 12px;
+	vertical-align: top;
+}
