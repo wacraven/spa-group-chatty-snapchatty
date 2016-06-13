@@ -29,9 +29,20 @@ body {
 }
 
 .navBar-contents > button {
-	padding: 9px;
-	margin-top: 12px;
+	padding: 6px;
+	border: none;
+	margin-top: 13px;
 	vertical-align: top;
+}
+
+.navBar-userSelect > label {
+	padding-left: 3px;
+	padding-right: 15px;
+}
+
+.navBar-pageOptions > label {
+	padding-left: 3px;
+	padding-right: 15px;	
 }
 
 .message-container {
