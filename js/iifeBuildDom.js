@@ -24,7 +24,9 @@ var Chatty = ((originalChatty) => {
 	};
 
 	// Do I need a return here for Chatty?  Or does passing DOM into loadMessage work?
+	console.log(originalChatty.loadMessage);	
+	originalChatty.loadMessage(buildDom);
 
-	Chatty.loadMessage(buildDom);
+	return originalChatty;
 
 })(Chatty || {});
