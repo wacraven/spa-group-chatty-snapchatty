@@ -3,6 +3,7 @@ var Chatty = ((originalChatty) => {
 	messageBoardArray = [];
 
 	return {
+		// Get JSON data
 		// callback is parameter for buildDom
 		loadMessage: (callback) => {
 			var messageRequest = new XMLHttpRequest();
