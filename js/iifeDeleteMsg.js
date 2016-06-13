@@ -1,0 +1,5 @@
+var Chatty = ((originalChatty) => {
+
+
+
+})(Chatty || {});
