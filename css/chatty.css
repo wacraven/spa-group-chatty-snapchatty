@@ -3,6 +3,8 @@
 	width: 100%;
 	padding-bottom: 10px;
 	border-bottom: 1px solid black;
+	top: 0;
+	background-color: white;
 }
 
 .navBar-contents {
@@ -26,4 +28,12 @@
 	padding: 9px;
 	margin-top: 12px;
 	vertical-align: top;
+}
+
+.message-container {
+	border: 1px solid black;
+	width: 70%;
+	margin: auto;
+	margin-top: 150px;
+	height: 1000px;
 }
