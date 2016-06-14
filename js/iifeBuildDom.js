@@ -1,3 +1,4 @@
+// THIS IS JUST TO BUILD THE DOM FROM JSON FILE
 var Chatty = ((originalChatty) => {
 
 	function buildDom(messagesArray) {
@@ -22,9 +23,7 @@ var Chatty = ((originalChatty) => {
 		messagesDiv.innerHTML = messageString;
 
 	};
-
-	// Do I need a return here for Chatty?  Or does passing DOM into loadMessage work?
-	console.log(originalChatty.loadMessage);	
+	
 	originalChatty.loadMessage(buildDom);
 
 	return originalChatty;
