@@ -61,3 +61,12 @@ body {
 .light {
 	color: white;
 }
+
+.message-name {
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.large {
+	font-size: 1.8rem;
+}

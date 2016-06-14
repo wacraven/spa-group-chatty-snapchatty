@@ -5,6 +5,8 @@ var Chatty = ((originalChatty) => {
 	var userSelect = document.getElementsByClassName("navBar-userSelect").item(0);
 	var clearBtn = document.getElementById(`clear-messages`);
 	var darkBtn = document.getElementById('darkThemeCheck');
+	var largeBtn = document.getElementById('largeTextCheck');
+	var regText = document.getElementsByClassName('enlarge');
 	var lightEl = document.getElementsByClassName('darken');
 	var darkEl = document.getElementsByClassName('lighten');
 	
@@ -32,9 +34,15 @@ var Chatty = ((originalChatty) => {
       lightEl.item(i).classList.toggle('dark');
     }
     for (i = 0; i < darkEl.length; i++) {
-      darkEl.item(i).classList.toggle('light')
+      darkEl.item(i).classList.toggle('light');
     }
   });
+
+	largeBtn.addEventListener('change', (event) => {
+		for (i = 0; i < regText.length; i++) {
+			regText.item(i).classList.toggle('large');
+		}
+	});
 
 	return originalChatty;
 
