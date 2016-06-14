@@ -20,13 +20,10 @@ var Chatty = ((originalChatty) => {
 				<button class="darken lighten" id="delete--${idCounter}">Delete</button>
 			</div>`
 
-		// messagesDiv.innerHTML += messageString;
-
 		var newDiv = document.createElement("article");
 	  newDiv.innerHTML = messageString;
 	  newDiv.id = `contentWrapper--${idCounter}`;
 	  messagesDiv.appendChild(newDiv);
-
 		document.getElementById(`delete--${idCounter}`).addEventListener("click", Chatty.deleteCard);
 		// Clear input after message added
 		userInput = "";

@@ -37,7 +37,6 @@ var Chatty = ((originalChatty) => {
 	});
 
 	originalChatty.deleteCard = function () {
-		// console.log("test");
   	var clickedBtn = event.target.id.split("--")[1];
   	var cardToDelete = document.getElementById(`contentWrapper--${clickedBtn}`);
   	messagesDiv = document.getElementById('inner-container');
