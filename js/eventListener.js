@@ -2,12 +2,12 @@ var Chatty = ((originalChatty) => {
 
 	var inputEl = document.getElementById(`user-input`);
 	var clearBtn = document.getElementById("clear-messages");
+	var userSelect = document.getElementsByClassName("navBar-userSelect").item(0);
 	
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
 			// add message to array
 			console.log("it works");
-			originalChatty.userFetch();
 		}
 	});
 
@@ -18,6 +18,11 @@ var Chatty = ((originalChatty) => {
 				container.removeChild(container.firstChild);
 			}
 	});
+
+	userSelect.addEventListener(`change`, (event) => {
+		console.log("change listener", event.target.value);
+	});
+
 
 	return originalChatty;
 
