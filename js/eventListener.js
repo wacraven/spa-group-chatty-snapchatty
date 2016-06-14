@@ -22,6 +22,10 @@ var Chatty = ((originalChatty) => {
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
 			// add message to array
+			if (user == undefined) {
+				user = "Anonymous"
+				return user;
+			} 
 			Chatty.userBuildDom(user);
 			inputEl.value = "";
 		}
