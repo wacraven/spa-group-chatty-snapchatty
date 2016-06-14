@@ -13,7 +13,7 @@ var Chatty = ((originalChatty) => {
 			// Need to build user, message, timestamp and buttons (edit and delete)
 			idCounter++
 			messageString += `
-				<div class='row'>
+				<div class='row' id="contentWrapper--${idCounter}">
 					<p class='lighten enlarge message-name'>${messagesArray[i].name}</p>
 					<p class='lighten enlarge'>${messagesArray[i].content}</p>
 					<p class='lighten enlarge'>${timeStamp}</p>
@@ -22,9 +22,9 @@ var Chatty = ((originalChatty) => {
 				</div>`
 		}
 
-		// document.getElementById(`delete--${idCounter}`).addEventListener("click", deleteCard);
-
 		messagesDiv.innerHTML = messageString;
+
+		document.getElementById(`delete--${idCounter}`).addEventListener("click", Chatty.deleteCard);
 
 	};
 

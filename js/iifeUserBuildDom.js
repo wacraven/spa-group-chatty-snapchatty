@@ -12,7 +12,7 @@ var Chatty = ((originalChatty) => {
 		// Need to build user, message, timestamp and buttons (edit and delete)
 		idCounter ++
 		messageString += `
-			<div class='row' id="contentWrapper--${idCounter}">
+			<div class='row'>
 				<p class='lighten enlarge message-name'>${user}</p>
 				<p class='lighten enlarge'>${userInput}</p>
 				<p class='lighten enlarge'>${timeStamp}</p>
@@ -20,7 +20,12 @@ var Chatty = ((originalChatty) => {
 				<button class="darken lighten" id="delete--${idCounter}">Delete</button>
 			</div>`
 
-		messagesDiv.innerHTML += messageString;
+		// messagesDiv.innerHTML += messageString;
+
+		var newDiv = document.createElement("article");
+	  newDiv.innerHTML = messageString;
+	  newDiv.id = `contentWrapper--${idCounter}`;
+	  messagesDiv.appendChild(newDiv);
 
 		document.getElementById(`delete--${idCounter}`).addEventListener("click", Chatty.deleteCard);
 		// Clear input after message added
