@@ -27,6 +27,7 @@ var Chatty = ((originalChatty) => {
 				return user;
 			} 
 			Chatty.userBuildDom(user);
+			inputEl.value = "";
 		}
 	});
 
