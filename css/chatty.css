@@ -53,3 +53,11 @@ body {
 	height: 1000px;
 	background-color: white;
 }
+
+.dark {
+	background-color: black;
+}
+
+.light {
+	color: white;
+}
