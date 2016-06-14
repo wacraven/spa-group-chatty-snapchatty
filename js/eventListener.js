@@ -9,11 +9,21 @@ var Chatty = ((originalChatty) => {
 	var regText = document.getElementsByClassName('enlarge');
 	var lightEl = document.getElementsByClassName('darken');
 	var darkEl = document.getElementsByClassName('lighten');
+	var user;
 	
+
+	userSelect.addEventListener(`change`, (event) => {
+		console.log("change listener", event.target.value);
+		user = event.target.value;
+		inputEl.focus();
+		return user;
+	});
+
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
 			// add message to array
 			console.log("it works");
+			Chatty.userBuildDom(user);
 		}
 	});
 
@@ -23,10 +33,6 @@ var Chatty = ((originalChatty) => {
 			while (container.firstChild) {
 				container.removeChild(container.firstChild);
 			}
-	});
-
-	userSelect.addEventListener(`change`, (event) => {
-		console.log("change listener", event.target.value);
 	});
 
 	darkBtn.addEventListener('change', (event) => {
