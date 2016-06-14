@@ -1,4 +1,8 @@
 var Chatty = ((originalChatty) => {
+	var darkEl = document.getElementsByClassName('lighten');
+	var darkBtn = document.getElementById('darkThemeCheck');
+	var lightEl = document.getElementsByClassName('darken');
+
 
 	var idCounter = 5;
 
@@ -10,6 +14,17 @@ var Chatty = ((originalChatty) => {
 
 
 		// Need to build user, message, timestamp and buttons (edit and delete)
+		if (darkBtn.checked == true) {
+		idCounter ++
+		messageString += `
+			<div class='row'>
+				<p class='lighten enlarge message-name light'>${user}</p>
+				<p class='lighten enlarge light'>${userInput}</p>
+				<p class='lighten enlarge light'>${timeStamp}</p>
+				<button class="darken lighten dark light" id="edit--${idCounter}">Edit</button>
+				<button class="darken lighten dark light" id="delete--${idCounter}">Delete</button>
+			</div>`
+		} else {
 		idCounter ++
 		messageString += `
 			<div class='row'>
@@ -19,6 +34,7 @@ var Chatty = ((originalChatty) => {
 				<button class="darken lighten" id="edit--${idCounter}">Edit</button>
 				<button class="darken lighten" id="delete--${idCounter}">Delete</button>
 			</div>`
+		}
 
 		var newDiv = document.createElement("article");
 	  newDiv.innerHTML = messageString;
@@ -27,7 +43,6 @@ var Chatty = ((originalChatty) => {
 		document.getElementById(`delete--${idCounter}`).addEventListener("click", Chatty.deleteCard);
 		// Clear input after message added
 		userInput = "";
-
 	};
 
 	return originalChatty;
