@@ -25,6 +25,11 @@ var Chatty = ((originalChatty) => {
 			if (user == undefined) {
 				user = "Anonymous"
 			} 
+			console.log("", inputEl.value);
+			if (inputEl.value == '') {
+				alert('You must input text!');
+				return
+			}
 			Chatty.userBuildDom(user);
 			inputEl.value = "";
 			clearBtn.disabled = false; //enables clear button when enter is pushed
