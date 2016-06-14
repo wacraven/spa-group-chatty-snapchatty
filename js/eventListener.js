@@ -7,6 +7,7 @@ var Chatty = ((originalChatty) => {
 		if (event.keyCode === 13) {
 			// add message to array
 			console.log("it works");
+			originalChatty.userFetch();
 		}
 	});
 
