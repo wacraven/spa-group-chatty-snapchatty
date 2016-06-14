@@ -27,6 +27,7 @@ var Chatty = ((originalChatty) => {
 			} 
 			Chatty.userBuildDom(user);
 			inputEl.value = "";
+			clearBtn.disabled = false; //enables clear button when enter is pushed
 		}
 	});
 
@@ -36,6 +37,7 @@ var Chatty = ((originalChatty) => {
 			while (container.firstChild) {
 				container.removeChild(container.firstChild);
 			}
+		clearBtn.disabled = true; //disables clear button when clear button is pushed
 	});
 
 	darkBtn.addEventListener('change', (event) => {
