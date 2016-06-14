@@ -1,10 +1,11 @@
 body {
-	background-color: silver;
+	background-color: gray;
 }
 
 .navBar {
 	position: fixed;
 	width: 100%;
+	padding-top: 20px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid black;
 	top: 0;
@@ -55,16 +56,22 @@ body {
 }
 
 .dark {
-	background-color: black;
+	background-color: dimgray;
 }
 
 .light {
 	color: white;
 }
 
+.message-container {
+	padding: 10px;
+}
+
 .message-name {
 	font-weight: bold;
 	font-size: 1.3rem;
+	border-top: 1px solid black;
+	padding-top: 10px;
 }
 
 .large {

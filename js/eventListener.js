@@ -25,7 +25,6 @@ var Chatty = ((originalChatty) => {
 			if (user == undefined) {
 				user = "Anonymous"
 			} 
-			console.log("", inputEl.value);
 			if (inputEl.value == '') {
 				alert('You must input text!');
 				return
@@ -51,6 +50,11 @@ var Chatty = ((originalChatty) => {
     }
     for (i = 0; i < darkEl.length; i++) {
       darkEl.item(i).classList.toggle('light');
+    }
+    if (document.getElementById('logoImg').src == "http://localhost:8080/img/logoInvert.png") {
+    document.getElementById('logoImg').src = "img/logo.png";
+    } else {
+    document.getElementById('logoImg').src = "http://localhost:8080/img/logoInvert.png";
     }
   });
 
