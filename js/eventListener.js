@@ -24,7 +24,6 @@ var Chatty = ((originalChatty) => {
 			// add message to array
 			if (user == undefined) {
 				user = "Anonymous"
-				return user;
 			} 
 			Chatty.userBuildDom(user);
 			inputEl.value = "";
