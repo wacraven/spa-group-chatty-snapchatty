@@ -22,8 +22,8 @@ var Chatty = ((originalChatty) => {
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
 			// add message to array
-			console.log("it works");
 			Chatty.userBuildDom(user);
+			inputEl.value = "";
 		}
 	});
 
