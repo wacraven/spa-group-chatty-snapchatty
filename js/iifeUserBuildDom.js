@@ -4,17 +4,17 @@ var Chatty = ((originalChatty) => {
 		var messageString = "";
 		var userInput = document.getElementById(`user-input`).value;
 		var messagesDiv = document.getElementById(`inner-container`);
-		var timeStamp = Date.now();
+		var timeStamp = Date();
 
 
 		// Need to build user, message, timestamp and buttons (edit and delete)
 		messageString += `
 			<div class='row'>
-				<p>${user}</p>
-				<p>${userInput}</p>
-				<p>${timeStamp}</p>
-				<button>Edit</button>
-				<button>Delete</button>
+				<p class='lighten enlarge message-name'>${user}</p>
+				<p class='lighten enlarge'>${userInput}</p>
+				<p class='lighten enlarge'>${timeStamp}</p>
+				<button class="darken lighten">Edit</button>
+				<button class="darken lighten">Delete</button>
 			</div>`
 
 		messagesDiv.innerHTML += messageString;
