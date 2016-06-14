@@ -4,7 +4,7 @@ var Chatty = ((originalChatty) => {
 	function buildDom(messagesArray) {
 	var messageString = "";
 	var messagesDiv = document.getElementById(`inner-container`);
-	var timeStamp = Date.now();
+	var timeStamp = Date();
 
 
 	// Loop through array and add JSON

@@ -51,6 +51,7 @@ body {
 	margin: auto;
 	margin-top: 150px;
 	background-color: white;
+	min-height: 1000px;
 }
 
 .dark {
