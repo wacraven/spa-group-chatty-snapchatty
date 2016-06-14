@@ -1,7 +1,7 @@
 var Chatty = ((originalChatty) => {
 
 	var inputEl = document.getElementById(`user-input`);
-	var clearBtn = document.getElementById("clear-messages");
+	var clearBtn = document.getElementById(`clear-messages`);
 	
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
