@@ -1,10 +1,12 @@
 var Chatty = ((originalChatty) => {
 
 	var inputEl = document.getElementById(`user-input`);
+	var clearBtn = document.getElementById("clear-messages");
+	var userSelect = document.getElementsByClassName("navBar-userSelect").item(0);
 	var clearBtn = document.getElementById(`clear-messages`);
 	var darkBtn = document.getElementById('darkThemeCheck');
-  var lightEl = document.getElementsByClassName('darken');
-  var darkEl = document.getElementsByClassName('lighten');
+	var lightEl = document.getElementsByClassName('darken');
+	var darkEl = document.getElementsByClassName('lighten');
 	
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 13) {
@@ -19,6 +21,10 @@ var Chatty = ((originalChatty) => {
 			while (container.firstChild) {
 				container.removeChild(container.firstChild);
 			}
+	});
+
+	userSelect.addEventListener(`change`, (event) => {
+		console.log("change listener", event.target.value);
 	});
 
 	darkBtn.addEventListener('change', (event) => {
