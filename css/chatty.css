@@ -57,3 +57,7 @@ body {
 .dark {
 	background-color: black;
 }
+
+.light {
+	color: white;
+}
