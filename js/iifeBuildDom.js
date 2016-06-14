@@ -12,9 +12,9 @@ var Chatty = ((originalChatty) => {
 			// Need to build user, message, timestamp and buttons (edit and delete)
 			messageString += `
 				<div class='row'>
-					<h2 class='lighten'>${messagesArray[i].name}</h2>
-					<p class='lighten'>${messagesArray[i].content}</p>
-					<p class='lighten'>${timeStamp}</p>
+					<p class='lighten enlarge message-name'>${messagesArray[i].name}</p>
+					<p class='lighten enlarge'>${messagesArray[i].content}</p>
+					<p class='lighten enlarge'>${timeStamp}</p>
 					<button class="darken lighten">Edit</button>
 					<button class="darken lighten">Delete</button>
 				</div>`
