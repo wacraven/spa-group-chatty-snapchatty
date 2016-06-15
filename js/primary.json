@@ -1,24 +1,24 @@
 {
   "messages": [
     {
-      "name": "Boba Fett",
-      "content": "My dad told me this was the best place to meet women."
-    },
-    {
-      "name": "Bossk",
-      "content": "I've grown weary of chasing Wookiees."
-    },
-    {
-      "name": "Dengar",
-      "content": "Word on the street says Han Solo isn't the only stunner in this galaxy."
+      "name": "Aurra Sing",
+      "content": "I think I know all of you a little too well."
     },
     {
       "name": "IG-88",
       "content": "Bleep. Bleep bloop bleep bleep. Bloop bloop bleep. Bloop."
     },
     {
-      "name": "Aurra Sing",
-      "content": "I think I know all of you a little too well."
+      "name": "Dengar",
+      "content": "Word on the street says Han Solo isn't the only stunner in this galaxy."
+    },
+    {
+      "name": "Bossk",
+      "content": "I've grown weary of chasing Wookiees."
+    },
+    {
+      "name": "Boba Fett",
+      "content": "My dad told me this was the best place to meet women."
     }
   ]
 }

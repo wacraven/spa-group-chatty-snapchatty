@@ -44,6 +44,7 @@ var Chatty = ((originalChatty) => {
 	  messagesDiv.insertBefore(newDiv, latestMessage);
 		document.getElementById(`delete--${idCounter}`).addEventListener("click", Chatty.deleteCard);
 		document.getElementById(`edit--${idCounter}`).addEventListener("click", Chatty.editCard);
+		originalChatty.trimMessages();
 	};
 
 	return originalChatty;
