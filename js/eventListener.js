@@ -1,7 +1,7 @@
 var Chatty = ((originalChatty) => {
 
 	var inputEl = document.getElementById(`user-input`);
-	var clearBtn = document.getElementById("clear-messages");
+	var clearBtn = document.getElementById(`clear-messages`);
 	var userSelect = document.getElementsByClassName("navBar-userSelect").item(0);
 	var clearBtn = document.getElementById(`clear-messages`);
 	var darkBtn = document.getElementById('darkThemeCheck');
@@ -35,11 +35,37 @@ var Chatty = ((originalChatty) => {
 		}
 	});
 
-	originalChatty.deleteCard = function () {
+	originalChatty.deleteCard = () => {
   	var clickedBtn = event.target.id.split("--")[1];
   	var cardToDelete = document.getElementById(`contentWrapper--${clickedBtn}`);
   	messagesDiv = document.getElementById('inner-container');
   	messagesDiv.removeChild(cardToDelete);
+	}
+
+	originalChatty.editCard = () => {
+  	var clickedBtn = event.target.id.split("--")[1];
+  	var cardToEdit = document.getElementById(`contentWrapper--${clickedBtn}`);
+  	var rowEl = cardToEdit.firstElementChild;
+  	var messToEdit = rowEl.children[1];
+  	console.log("messToEdit", messToEdit);
+  	inputEl.value = messToEdit.innerHTML;
+  	inputEl.focus();
+  	// Picks paragraph, puts in userInput w/focus
+  	// Want to use replaceChild()
+  	// Can't sort event listener
+
+	}
+
+	originalChatty.trimMessages = () => {
+  	var messagesDiv = document.getElementById(`inner-container`);
+  	console.log(`messagesDiv`, messagesDiv.children);
+  	var messNum = messagesDiv.children;
+  	var last = messagesDiv.lastChild;
+  	console.log(`inner-comtainer`, messagesDiv.children.length);
+  	if (messNum.length >= 20) {
+  		messagesDiv.removeChild(last);
+  	}
+
 	}
 
 	clearBtn.addEventListener(`click`, (event) => {
