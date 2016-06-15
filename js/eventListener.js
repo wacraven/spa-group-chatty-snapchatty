@@ -42,6 +42,21 @@ var Chatty = ((originalChatty) => {
   	messagesDiv.removeChild(cardToDelete);
 	}
 
+	originalChatty.editCard = function () {
+  	var clickedBtn = event.target.id.split("--")[1];
+  	var cardToEdit = document.getElementById(`contentWrapper--${clickedBtn}`);
+  	//var messageToEdit = document.getElementsByClassName(`edit`);
+  	console.log("cardToEdit", cardToEdit.children[1]);
+  	var userEdit = cardToEdit.children[0];
+  	console.log("cardToEdit.children", cardToEdit.children[0]);
+  	var stringToEdit = cardToEdit.children[1].innerHTML;
+  	console.log("stringToEdit", stringToEdit);
+  	inputEl.value = stringToEdit;
+  	inputEl.focus();
+  	stringToEdit = inputEl.value;
+
+	}
+
 	clearBtn.addEventListener(`click`, (event) => {
 		// This needs to be removeChild(), not remove
 		var container = document.getElementById(`inner-container`);
