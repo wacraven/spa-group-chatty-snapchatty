@@ -5,26 +5,20 @@ var Chatty = ((originalChatty) => {
 
 		// Get JSON data
 		// callback is parameter for buildDom
-		originalChatty.loadMessage = (callback) => {
-			var messageRequest = new XMLHttpRequest();
-
-			messageRequest.addEventListener(`load`, () => {
-				var messageData = JSON.parse(messageRequest.responseText);				
-
-				messageBoardArray = messageData.messages;
-
-				// This should build DOM with updated info
-				callback(messageBoardArray);
-			});
-			
-			messageRequest.addEventListener(`error`, () => {
-				console.log(`An error occurred while transferring the messageData`);
-			});
-
-			messageRequest.open(`GET`, `js/primary.json`); 
-			messageRequest.send();
-
-		};
+	originalChatty.loadMessage = function(callback) {
+		
+		$.ajax({
+			url: 'js/primary.json',
+		})
+		.done(function(messageData) {
+			messageBoardArray = messageData.messages;
+			// This should build DOM with updated info
+			callback(messageBoardArray);
+		})
+		.fail(function() {
+			console.log("An error occurred while transferring the messageData");
+		})
+	}
 
 
 	return originalChatty;
